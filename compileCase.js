@@ -6,5 +6,5 @@ fs.writeFileSync('config.json', JSON.stringify(content, null, 2))
 execSync('git add config.json')
 execSync(`git commit -m 'style: 修改citest 配置'`)
 const a = execSync(`git log --pretty=one`)
-console.log(a);
+console.log(a.toString());
 // execSync(`git push --no-verify`)
