@@ -16,11 +16,9 @@
     "url": "https://github.com/cleanchedFist/test/issues"
   },
   "homepage": "https://github.com/cleanchedFist/test#readme",
-  "husky": {
     "hooks": {
       "pre-push": "tnpm run compileCase"
-    }
-  },
+    },
   "devDependencies": {
     "husky": "^3.1.0"
   }
