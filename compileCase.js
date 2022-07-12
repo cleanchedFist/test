@@ -7,8 +7,10 @@ execSync('git add config.json')
 execSync(`git commit -m 'style: 修改citest 配置'`)
 const commitId = execSync(`git rev-parse --short HEAD`).toString().trim()
 const branch = execSync(`git symbolic-ref --short -q HEAD`).toString().trim()
+console.log()
 console.log(commitId);
 console.log(branch);
-
+console.log(`git update-ref refs/heads/${branch} ${commitId}`)
+console.log()
 execSync(`git push --no-verify`)
 execSync(`git update-ref refs/heads/${branch} ${commitId}`)
