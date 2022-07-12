@@ -16,12 +16,12 @@
     "url": "https://github.com/cleanchedFist/test/issues"
   },
   "homepage": "https://github.com/cleanchedFist/test#readme",
-  "dependencies": {
-    "husky": "^8.0.1"
-  },
   "husky": {
     "hooks": {
       "pre-push": "tnpm run compileCase"
     }
+  },
+  "devDependencies": {
+    "husky": "^8.0.1"
   }
 }
