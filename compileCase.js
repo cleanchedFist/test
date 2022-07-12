@@ -9,6 +9,6 @@ const commitId = execSync(`git rev-parse --short HEAD`).toString().trim()
 const branch = execSync(`git symbolic-ref --short -q HEAD`).toString().trim()
 console.log(commitId);
 console.log(branch);
-execSync(`git update-ref refs/heads/${branch} ${commitId}`)
 
-// execSync(`git push --no-verify`)
+execSync(`git push --no-verify`)
+execSync(`git update-ref refs/heads/${branch} ${commitId}`)
