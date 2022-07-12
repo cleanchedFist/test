@@ -1,0 +1,27 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compileCase": "node compileCase.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cleanchedFist/test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cleanchedFist/test/issues"
+  },
+  "homepage": "https://github.com/cleanchedFist/test#readme",
+  "dependencies": {
+    "husky": "^8.0.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "tnpm run compileCase"
+    }
+  }
+}
