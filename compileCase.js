@@ -1,3 +1,4 @@
+console.log(1111)
 const fs = require('fs')
 const { execSync } = require('child_process')
 const content = JSON.parse(fs.readFileSync('config.json').toString())
