@@ -1,12 +1,8 @@
-console.log(1111)
 const fs = require('fs')
 const { execSync } = require('child_process')
 const content = JSON.parse(fs.readFileSync('config.json').toString())
 content.deviceId = +content.deviceId + 1
 fs.writeFileSync('config.json', JSON.stringify(content, null, 2))
-console.log(111)
 execSync('git add config.json')
-console.log(332)
 execSync(`git commit -m 'style: 修改citest 配置'`)
-console.log(3333)
 execSync(`git push --no-verify`)
