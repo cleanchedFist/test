@@ -7,7 +7,7 @@ execSync('git add config.json')
 execSync(`git commit -m 'style: 修改citest 配置'`)
 const commitId = execSync(`git rev-parse HEAD`).toString().trim()
 const branch = execSync(`git symbolic-ref --short -q HEAD`).toString().trim()
-const commit_ref = fs.readFileSync('/Users/code/Desktop/Code/test/test/.git/COMMIT_EDITMSG').toString()
+const commit_ref = fs.readFileSync('/Users/code/Desktop/Code/test/test/.git/refs/heads/main').toString()
 console.log()
 console.log(commit_ref)
 console.log(commitId);
